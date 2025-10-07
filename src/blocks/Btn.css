@@ -1,0 +1,37 @@
+.btn {
+  cursor: pointer;
+  max-width: 200px;
+  height: 60px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn--primary {
+  border: 2px solid #4d44b5;
+  color: #4d44b5;
+  padding: 14px 33px;
+  background-color: transparent;
+}
+
+.btn__icon--right {
+  max-width: 20px;
+  height: 12px;
+}
+
+.btn--secondary {
+  background-color: #4d44b5;
+  color: #ffffffff;
+  border: none;
+  padding: 16px 30px;
+}
+
+.btn__icon--left {
+  max-width: 16px;
+  height: 16px;
+}

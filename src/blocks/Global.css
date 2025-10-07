@@ -12,15 +12,23 @@ html,
 body,
 #root {
   height: 100%;
-  width: 100%;
+  max-width: 1920px;
   font-family: "Poppins", sans-serif;
-  background-color: #F3F4FF;
+  background-color: #f3f4ff;
 }
 
-.page__title{
+.page__title {
   color: #303972;
   font-size: 36px;
   font-weight: bold;
+}
+
+.page__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+  margin-top: 46px;
 }
 
 .layout {

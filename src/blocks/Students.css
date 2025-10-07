@@ -1,0 +1,10 @@
+.students__table-wrap {
+  background-color: #ffff;
+  max-width: 1475px;
+  height: 873px;
+  margin-top: 40px;
+  border-radius: 50px;
+}
+
+.students__table {
+}
