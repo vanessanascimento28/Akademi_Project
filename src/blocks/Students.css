@@ -1,10 +1,114 @@
-.students__table-wrap {
+td {
+  max-width: 1472px;
+  height: 112px;
+}
+
+.table__wrap {
   background-color: #ffff;
   max-width: 1475px;
   height: 873px;
   margin-top: 40px;
-  border-radius: 50px;
+  border-radius: 20px;
+  padding: 34px 24px 26px 37px;
 }
 
-.students__table {
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table__header th {
+  color: #303972;
+  font-size: 14px;
+  font-weight: 600;
+  max-width: 1270px;
+  height: 21px;
+  text-align: left;
+  padding-bottom: 26px;
+  border-bottom: 2px solid #dbdbdb;
+}
+
+.table__info-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #c1bbeb;
+  flex-shrink: 0;
+}
+
+.table__info-name {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.table__info-names {
+  color: #303972;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.table__info-date {
+  color: #a098ae;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.table__info-parent {
+  color: #303972;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.table__info-city {
+  color: #303972;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.table__id {
+  text-decoration: none;
+  color: #4d44b5;
+  font-size: 18px;
+  font-weight: 600;
+  max-width: 112px;
+  height: 17px;
+}
+
+.table__info-contact {
+  max-width: 96px;
+  height: 40px;
+  display: flex;
+  gap: 16px;
+}
+
+.table__btn {
+  border: none;
+  cursor: pointer;
+  max-width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 20px;
+  max-width: 80px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+}
+
+.badge.viia {
+  background: #fb7d5b;
+}
+.badge.viib {
+  background: #fcc43e;
+}
+.badge.viic {
+  background: #6d5dfc;
 }
