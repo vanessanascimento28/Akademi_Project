@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import AkademiLogo from "../assets/images/logo/AkademiLogo.svg";
 import Home from "../assets/images/icons/Home.svg";
 import Finance from "../assets/images/icons/Finance.svg";
-import { ReactComponent as Students } from "../assets/images/icons/Student.svg";
+import Students from "../assets/images/icons/Student.svg";
 import Teachers from "../assets/images/icons/Teacher.svg";
 import User from "../assets/images/icons/User.svg";
 
