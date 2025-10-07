@@ -1,9 +1,20 @@
+import { useState } from "react";
 import FilterIcon from "../../assets/images/icons/FilterIcon.svg";
 import AddIcon from "../../assets/images/icons/AddIcon.svg";
 import Mail from "../../assets/images/icons/Mail.svg";
 import Phone from "../../assets/images/icons/Phone.svg";
+import ArrowLeft from "../../assets/images/icons/ArrowLeft.svg";
+import ArrowRight from "../../assets/images/icons/ArrowRight.svg";
 
 export default function Students() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 3;
+
+  const goTo = (n) => setCurrentPage(n);
+  const prev = () => currentPage > 1 && setCurrentPage(currentPage - 1);
+  const next = () =>
+    currentPage < totalPages && setCurrentPage(currentPage + 1);
+
   const rows = [
     {
       name: "Samanta William",
@@ -144,6 +155,39 @@ export default function Students() {
             ))}
           </tbody>
         </table>
+        <nav className="pagination" aria-label="Pagination">
+          <button
+            className="pagination__arrow"
+            onClick={prev}
+            disabled={currentPage === 1}
+            aria-label="Previous page"
+          >
+            <img src={ArrowLeft} alt="" aria-hidden="true" />
+          </button>
+
+          {[1, 2, 3].map((n) => (
+            <button
+              key={n}
+              onClick={() => goTo(n)}
+              className={`pagination__page ${
+                currentPage === n ? "is-current" : ""
+              }`}
+              aria-current={currentPage === n ? "page" : undefined}
+              aria-label={`Go to page ${n}`}
+            >
+              {n}
+            </button>
+          ))}
+
+          <button
+            className="pagination__arrow"
+            onClick={next}
+            disabled={currentPage === totalPages}
+            aria-label="Next page"
+          >
+            <img src={ArrowRight} alt="" aria-hidden="true" />
+          </button>
+        </nav>
       </div>
     </section>
   );

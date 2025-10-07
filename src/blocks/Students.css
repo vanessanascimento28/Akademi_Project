@@ -112,3 +112,65 @@ td {
 .badge.viic {
   background: #6d5dfc;
 }
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+}
+
+.pagination__page {
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  border: 1.5px solid #b9b2cc;
+  background: #fff;
+  color: #7a70a0;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.05s, background 0.15s, color 0.15s,
+    border-color 0.15s;
+}
+.pagination__page:hover {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+.pagination__page:active {
+  transform: translateY(1px);
+}
+
+.pagination__page.is-current {
+  background: #4d44b5;
+  border-color: #4d44b5;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(77, 68, 181, 0.25);
+}
+
+.pagination__arrow {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+}
+.pagination__arrow:hover {
+  opacity: 1;
+}
+.pagination__arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.pagination__arrow img {
+  width: 21px;
+  height: 14px;
+  display: block;
+}
