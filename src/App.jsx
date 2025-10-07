@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 
-function App() {
-  const [count, setCount] = useState(0);
+export default function App() {
 
   return (
-    <>
+    <div className="layout">
       <Sidebar />
-    </>
+      <main className="content">
+        <Outlet />
+      </main>
+    </div>
   );
 }
-
-export default App;

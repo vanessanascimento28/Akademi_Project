@@ -18,23 +18,23 @@ export default function Sidebar() {
         <h1 className="sidebar__title">Akademi</h1>
       </div>
       <nav className="sidebar__nav">
-        <NavLink to="Dashboard" className="sidebar__link">
+        <NavLink to="/dashboard" className="sidebar__link">
           <img src={Home} alt="" className="sidebar__icon" />
           Dashboard
         </NavLink>
-        <NavLink to="Students" className="sidebar__link">
+        <NavLink to="/students" className="sidebar__link">
           <img src={Students} alt="" className="sidebar__icon" />
           Students
         </NavLink>
-        <NavLink to="AddStudents" className="sidebar__link">
+        <NavLink to="/addstudents" className="sidebar__link">
           <img src={Students} alt="" className="sidebar__icon" />
           Add Students
         </NavLink>
-        <NavLink to="Teachers" className="sidebar__link">
+        <NavLink to="/teachers" className="sidebar__link">
           <img src={Teachers} alt="" className="sidebar__icon" />
           Teachers
         </NavLink>
-        <NavLink to="Finance" className="sidebar__link">
+        <NavLink to="/finance" className="sidebar__link">
           <img
             src={Finance}
             alt="ícone mão segurando uma moeda"
@@ -42,7 +42,7 @@ export default function Sidebar() {
           />
           Finance
         </NavLink>
-        <NavLink to="User" className="sidebar__link">
+        <NavLink to="/user" className="sidebar__link">
           <img src={User} alt="ícone de usuário" className="sidebar__icon" />
           User
         </NavLink>

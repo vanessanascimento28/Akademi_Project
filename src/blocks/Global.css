@@ -14,4 +14,21 @@ body,
   height: 100%;
   width: 100%;
   font-family: "Poppins", sans-serif;
+  background-color: #F3F4FF;
+}
+
+.page__title{
+  color: #303972;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 345px 1fr;
+  min-height: 100dvh;
+}
+
+.content {
+  padding: 50px 50px 40px 50px;
 }
