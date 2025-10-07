@@ -1,0 +1,51 @@
+.sidebar {
+  background-color: #4d44b5;
+  max-width: 345px;
+  height: 100dvh;
+  padding-top: 50px;
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  padding-left: 46px;
+}
+
+.sidebar__logo {
+  max-width: 48px;
+  height: 54px;
+}
+
+.sidebar__title {
+  color: #ffffffff;
+  font-size: 36px;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  margin: 46px 0 0 46px;
+  row-gap: 8px;
+}
+
+.sidebar__link {
+  text-decoration: none;
+  color: #c1bbeb;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.sidebar__link.active {
+  background-color: #f3f4ff;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  color: #4d44b5;
+}
+
+.sidebar__icon {
+  max-width: 40px;
+  height: 40px;
+  margin: 12px 24px;
+}
