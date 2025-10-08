@@ -73,128 +73,130 @@ export default function Students() {
   ];
 
   return (
-    <section className="page">
-      <header className="page__header">
-        <h2 className="page__title">Students</h2>
-      </header>
-      <section className="page__actions">
-        <button className="btn btn--primary">
-          Newest
-          <img
-            src={FilterIcon}
-            alt="botão de abrir menu de filtros"
-            className="btn__icon btn__icon--right"
-          />
-        </button>
-        <button onClick={handleAddStudent} className="btn btn--secondary">
-          <img
-            src={AddIcon}
-            alt="botão para adicionar um novo estudante"
-            className="btn__icon btn__icon--left"
-          />
-          New Student
-        </button>
-      </section>
-      <div className="table__wrap">
-        <table className="table" role="table">
-          <thead className="table__header">
-            <tr>
-              <th className="table__header-name" scope="col">
-                Name
-              </th>
-              <th className="table__header-id" scope="col">
-                ID
-              </th>
-              <th className="table__header-date" scope="col">
-                Date
-              </th>
-              <th className="table__header-parent" scope="col">
-                Parent Name
-              </th>
-              <th className="table__header-city" scope="col">
-                City
-              </th>
-              <th className="table__header-contact" scope="col">
-                Contact
-              </th>
-              <th className="table__header-grade" scope="col">
-                Grade
-              </th>
-            </tr>
-          </thead>
-          <tbody className="table__info">
-            {rows.map((r, i) => (
-              <tr key={i}>
-                <td className="table__info-name">
-                  <span
-                    className="table__info-avatar"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="table__info-names">{r.name}</span>
-                </td>
-                <td className="table__info-id">
-                  <a className="table__id" href="#!">
-                    {r.id}
-                  </a>
-                </td>
-                <td className="table__info-date">{r.date}</td>
-                <td className="table__info-parent">{r.parent}</td>
-                <td className="table__info-city">{r.city}</td>
-                <td className="table__info-contact">
-                  <button className="table__btn" aria-label="Phone">
-                    <img src={Phone} alt="" className="table__btn-phone" />
-                  </button>
-                  <button className="table__btn" aria-label="Email">
-                    <img src={Mail} alt="" className="table__btn-mail" />
-                  </button>
-                </td>
-                <td>
-                  <span
-                    className={`badge ${r.grade
-                      .replace(/\s/g, "")
-                      .toLowerCase()}`}
-                  >
-                    {r.grade}
-                  </span>
-                </td>
+    <main className="content">
+      <section className="page">
+        <header className="page__header">
+          <h2 className="page__title">Students</h2>
+        </header>
+        <section className="page__actions">
+          <button className="btn btn--primary">
+            Newest
+            <img
+              src={FilterIcon}
+              alt="botão de abrir menu de filtros"
+              className="btn__icon btn__icon--right"
+            />
+          </button>
+          <button onClick={handleAddStudent} className="btn btn--secondary">
+            <img
+              src={AddIcon}
+              alt="botão para adicionar um novo estudante"
+              className="btn__icon btn__icon--left"
+            />
+            New Student
+          </button>
+        </section>
+        <div className="table__wrap">
+          <table className="table" role="table">
+            <thead className="table__header">
+              <tr>
+                <th className="table__header-name" scope="col">
+                  Name
+                </th>
+                <th className="table__header-id" scope="col">
+                  ID
+                </th>
+                <th className="table__header-date" scope="col">
+                  Date
+                </th>
+                <th className="table__header-parent" scope="col">
+                  Parent Name
+                </th>
+                <th className="table__header-city" scope="col">
+                  City
+                </th>
+                <th className="table__header-contact" scope="col">
+                  Contact
+                </th>
+                <th className="table__header-grade" scope="col">
+                  Grade
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-        <nav className="pagination" aria-label="Pagination">
-          <button
-            className="pagination__arrow"
-            onClick={prev}
-            disabled={currentPage === 1}
-            aria-label="Previous page"
-          >
-            <img src={ArrowLeft} alt="" aria-hidden="true" />
-          </button>
-
-          {[1, 2, 3].map((n) => (
+            </thead>
+            <tbody className="table__info">
+              {rows.map((r, i) => (
+                <tr key={i}>
+                  <td className="table__info-name">
+                    <span
+                      className="table__info-avatar"
+                      aria-hidden="true"
+                    ></span>
+                    <span className="table__info-names">{r.name}</span>
+                  </td>
+                  <td className="table__info-id">
+                    <a className="table__id" href="#!">
+                      {r.id}
+                    </a>
+                  </td>
+                  <td className="table__info-date">{r.date}</td>
+                  <td className="table__info-parent">{r.parent}</td>
+                  <td className="table__info-city">{r.city}</td>
+                  <td className="table__info-contact">
+                    <button className="table__btn" aria-label="Phone">
+                      <img src={Phone} alt="" className="table__btn-phone" />
+                    </button>
+                    <button className="table__btn" aria-label="Email">
+                      <img src={Mail} alt="" className="table__btn-mail" />
+                    </button>
+                  </td>
+                  <td>
+                    <span
+                      className={`badge ${r.grade
+                        .replace(/\s/g, "")
+                        .toLowerCase()}`}
+                    >
+                      {r.grade}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <nav className="pagination" aria-label="Pagination">
             <button
-              key={n}
-              onClick={() => goTo(n)}
-              className={`pagination__page ${
-                currentPage === n ? "is-current" : ""
-              }`}
-              aria-current={currentPage === n ? "page" : undefined}
-              aria-label={`Go to page ${n}`}
+              className="pagination__arrow"
+              onClick={prev}
+              disabled={currentPage === 1}
+              aria-label="Previous page"
             >
-              {n}
+              <img src={ArrowLeft} alt="" aria-hidden="true" />
             </button>
-          ))}
 
-          <button
-            className="pagination__arrow"
-            onClick={next}
-            disabled={currentPage === totalPages}
-            aria-label="Next page"
-          >
-            <img src={ArrowRight} alt="" aria-hidden="true" />
-          </button>
-        </nav>
-      </div>
-    </section>
+            {[1, 2, 3].map((n) => (
+              <button
+                key={n}
+                onClick={() => goTo(n)}
+                className={`pagination__page ${
+                  currentPage === n ? "is-current" : ""
+                }`}
+                aria-current={currentPage === n ? "page" : undefined}
+                aria-label={`Go to page ${n}`}
+              >
+                {n}
+              </button>
+            ))}
+
+            <button
+              className="pagination__arrow"
+              onClick={next}
+              disabled={currentPage === totalPages}
+              aria-label="Next page"
+            >
+              <img src={ArrowRight} alt="" aria-hidden="true" />
+            </button>
+          </nav>
+        </div>
+      </section>
+    </main>
   );
 }
