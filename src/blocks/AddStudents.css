@@ -1,0 +1,96 @@
+.form--student {
+  max-width: 1475px;
+  height: 753px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-top: 46px;
+}
+
+.form__title {
+  background-color: #4d44b5;
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 12px 0 12px 40px;
+}
+
+.form__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 35px 0 0 40px;
+}
+
+.form__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  max-width: 1178px;
+}
+
+.form__label {
+  color: #303972;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  width: 577px;
+  flex: 0 0 577px;
+}
+
+.form__inline-2 {
+  display: flex;
+  gap: 24px;
+}
+
+.form__inline-2 .form__input {
+  flex: 0 0 276.5px;
+  width: 276.5px;
+  height: 48px;
+}
+
+.form__label_type-large .form__input {
+  height: 175px;
+  resize: none;
+}
+
+.form__input {
+  border: 1.5px solid #c1bbeb;
+  margin-top: 16px;
+  height: 48px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 15px 0 12px 14px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #4d44b5;
+}
+
+.form__input:focus {
+  outline: none;
+  border-color: #4d44b5;
+  box-shadow: 0 0 0 2px rgba(77, 68, 181, 0.2);
+}
+
+.form__input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #a098ae;
+}
+
+.form__input--adress {
+  height: 175px;
+  padding: 15px 14px;
+  line-height: 1.5;
+}
+
+.form__charcounter {
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #a098ae;
+  align-self: flex-end;
+}

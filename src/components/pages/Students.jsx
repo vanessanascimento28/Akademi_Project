@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import FilterIcon from "../../assets/images/icons/FilterIcon.svg";
 import AddIcon from "../../assets/images/icons/AddIcon.svg";
 import Mail from "../../assets/images/icons/Mail.svg";
@@ -7,6 +8,11 @@ import ArrowLeft from "../../assets/images/icons/ArrowLeft.svg";
 import ArrowRight from "../../assets/images/icons/ArrowRight.svg";
 
 export default function Students() {
+  const navigate = useNavigate();
+  const handleAddStudent = () => {
+    navigate("/addstudents");
+  };
+
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 3;
 
@@ -80,7 +86,7 @@ export default function Students() {
             className="btn__icon btn__icon--right"
           />
         </button>
-        <button className="btn btn--secondary">
+        <button onClick={handleAddStudent} className="btn btn--secondary">
           <img
             src={AddIcon}
             alt="botão para adicionar um novo estudante"
