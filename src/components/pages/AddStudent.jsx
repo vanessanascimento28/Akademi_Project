@@ -232,6 +232,10 @@ export default function AddStudents() {
             </div>
           </form>
         </section>
+        <section className="page__actions">
+          <button className="btn btn--primary">Save as Draft</button>
+          <button className="btn btn--secondary">Submit</button>
+        </section>
       </section>
     </main>
   );
