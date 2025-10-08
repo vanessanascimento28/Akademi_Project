@@ -1,6 +1,5 @@
 .form--student {
   max-width: 1475px;
-  height: 753px;
   background-color: #ffffff;
   border-radius: 20px;
   margin-top: 46px;
@@ -20,7 +19,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  padding: 35px 0 0 40px;
+  padding: 35px 0 34px 40px;
 }
 
 .form__row {
@@ -36,8 +35,9 @@
   font-weight: 600;
   display: flex;
   flex-direction: column;
-  width: 577px;
-  flex: 0 0 577px;
+  max-width: 577px;
+  flex: 1 1 577px;
+  box-sizing: border-box;
 }
 
 .form__inline-2 {
@@ -46,9 +46,10 @@
 }
 
 .form__inline-2 .form__input {
-  flex: 0 0 276.5px;
-  width: 276.5px;
+  flex: 1 1 calc((100% - 24px) / 2);
+  width: calc((100% - 24px) / 2);
   height: 48px;
+  box-sizing: border-box;
 }
 
 .form__label_type-large .form__input {
@@ -97,7 +98,6 @@
 
 .form--parent {
   max-width: 1475px;
-  height: 605px;
   background-color: #ffffff;
   border-radius: 20px;
   margin-top: 46px;
