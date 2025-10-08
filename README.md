@@ -1,16 +1,44 @@
-# React + Vite
+# 🎓 Akademi Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Akademi Project Preview](./src/assets/images/preview/Akademi_Project_Preview.png)
 
-Currently, two official plugins are available:
+O Akademi Project é uma aplicação front-end desenvolvida em React, HTML e CSS, criada como parte de um teste técnico enviado pela empresa para avaliação de habilidades em Desenvolvimento Front-end.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✅ Resultado
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O proejto conta com uma interface dividida em seções temáticas, incluindo:
+Formulário de cadastro de estudantes (inputs, validações visuais e contador de caracteres)
+Seção de informações dos pais (campos estilizados, botões e opções de seleção com radio buttons customizados)
+Seção de ações (botões interativos com microanimações de clique e sombra difusa)
+Todas as seções seguem o mesmo design system, respeitando hierarquia de componentes e padrões de cor e tipografia definidos para a marca.
 
-## Expanding the ESLint configuration
+## ⚙️ Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Formulário de cadastro de estudantes com campos organizados em grid
+- Contador de caracteres dinâmico no campo de endereço
+- Botões com microinterações (efeito de clique e sombras suaves)
+- Campos de seleção (radio buttons) totalmente customizados via CSS
+- Layout consistente entre seções e estrutura semântica organizada
+
+## 🔧 Melhorias Futuras
+
+- Adicionar conteúdo às novas páginas do sistema
+- Implementar a funcionalidade completa dos botões (ex: salvar, cancelar, voltar)
+- Tornar o botão de paginação totalmente funcional
+- Adicionar validações de formulário com feedback visual ao usuário
+- Tornar o layout 100% responsivo para telas menores
+
+---
+
+## 👩‍💻 Autora
+
+Feito por Vanessa do Nascimento da Silva
+Desenvolvedora Front-end
+
+## 💬 Agradecimento
+
+Muito obrigada pela oportunidade de demonstrar minhas habilidades em desenvolvimento front-end por meio deste teste.
+Estou em busca de uma oportunidade para crescer profissionalmente, contribuir com projetos reais e continuar evoluindo como desenvolvedora.
+Fazer este projeto foi um passo importante nesse caminho, e me deixou ainda mais empolgada com o que posso construir e aprender junto a uma boa equipe. 💜
