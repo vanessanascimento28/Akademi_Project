@@ -143,3 +143,31 @@
   border-radius: 50%;
   background-color: #4d44b5;
 }
+
+@media (max-width: 1720px) {
+  .form--student,
+  .form--parent {
+    max-width: 1080px;
+  }
+
+  .form__title {
+    font-size: 18px;
+    padding: 12px 0 12px 30px;
+  }
+
+  .form__grid {
+    gap: 18px;
+    padding: 25px 0 24px 30px;
+  }
+
+  .form__row {
+    gap: 18px;
+    max-width: 800px;
+  }
+
+  .form__label {
+    font-size: 14px;
+    max-width: 350px;
+    flex: 1 1 350px;
+  }
+}

@@ -39,4 +39,5 @@ body,
 
 .content {
   padding: 50px 50px 40px 50px;
+  max-width: 1500px;
 }
