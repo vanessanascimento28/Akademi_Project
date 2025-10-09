@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FilterIcon from "../../assets/images/icons/FilterIcon.svg";
+import FilterIconUp from "../../assets/images/icons/FiltericonUp.svg";
 import AddIcon from "../../assets/images/icons/AddIcon.svg";
 import Mail from "../../assets/images/icons/Mail.svg";
 import Phone from "../../assets/images/icons/Phone.svg";
@@ -9,17 +10,19 @@ import ArrowRight from "../../assets/images/icons/ArrowRight.svg";
 
 export default function Students() {
   const navigate = useNavigate();
-  const handleAddStudent = () => {
-    navigate("/addstudents");
-  };
+  const handleAddStudent = () => navigate("/addstudents");
 
+  // paginação
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = 3;
-
   const goTo = (n) => setCurrentPage(n);
   const prev = () => currentPage > 1 && setCurrentPage(currentPage - 1);
   const next = () =>
     currentPage < totalPages && setCurrentPage(currentPage + 1);
+
+  // controle de ordenação (true = mais novo primeiro)
+  const [sortNewestFirst, setSortNewestFirst] = useState(true);
+  const toggleSort = () => setSortNewestFirst((v) => !v);
 
   const rows = [
     {
@@ -72,20 +75,38 @@ export default function Students() {
     },
   ];
 
+  const sortedRows = useMemo(() => {
+    const toTime = (d) => new Date(d).getTime();
+    return [...rows].sort((a, b) =>
+      sortNewestFirst
+        ? toTime(b.date) - toTime(a.date)
+        : toTime(a.date) - toTime(b.date)
+    );
+  }, [rows, sortNewestFirst]);
+
   return (
     <section className="page">
       <header className="page__header">
         <h2 className="page__title">Students</h2>
       </header>
+
       <section className="page__actions">
-        <button className="btn btn--primary">
-          Newest
+        <button
+          className="btn btn--primary"
+          onClick={toggleSort}
+          aria-pressed={sortNewestFirst}
+          title={
+            sortNewestFirst ? "Showing newest first" : "Showing oldest first"
+          }
+        >
+          {sortNewestFirst ? "Newest" : "Oldest"}
           <img
-            src={FilterIcon}
-            alt="botão de abrir menu de filtros"
+            src={sortNewestFirst ? FilterIcon : FilterIconUp}
+            alt=""
             className="btn__icon btn__icon--right"
           />
         </button>
+
         <button onClick={handleAddStudent} className="btn btn--secondary">
           <img
             src={AddIcon}
@@ -95,6 +116,7 @@ export default function Students() {
           New Student
         </button>
       </section>
+
       <div className="table__wrap">
         <table className="table" role="table">
           <thead className="table__header">
@@ -122,8 +144,9 @@ export default function Students() {
               </th>
             </tr>
           </thead>
+
           <tbody className="table__info">
-            {rows.map((r, i) => (
+            {sortedRows.map((r, i) => (
               <tr key={i}>
                 <td className="table__info-name">
                   <span
@@ -132,14 +155,17 @@ export default function Students() {
                   ></span>
                   <span className="table__info-names">{r.name}</span>
                 </td>
+
                 <td className="table__info-id">
                   <a className="table__id" href="#!">
                     {r.id}
                   </a>
                 </td>
+
                 <td className="table__info-date">{r.date}</td>
                 <td className="table__info-parent">{r.parent}</td>
                 <td className="table__info-city">{r.city}</td>
+
                 <td className="table__info-contact">
                   <button className="table__btn" aria-label="Phone">
                     <img src={Phone} alt="" className="table__btn-phone" />
@@ -148,6 +174,7 @@ export default function Students() {
                     <img src={Mail} alt="" className="table__btn-mail" />
                   </button>
                 </td>
+
                 <td>
                   <span
                     className={`badge ${r.grade
@@ -161,6 +188,7 @@ export default function Students() {
             ))}
           </tbody>
         </table>
+
         <nav className="pagination" aria-label="Pagination">
           <button
             className="pagination__arrow"
