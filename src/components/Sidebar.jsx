@@ -19,19 +19,31 @@ export default function Sidebar() {
       </div>
       <nav className="sidebar__nav">
         <NavLink to="/dashboard" className="sidebar__link">
-          <img src={Home} alt="" className="sidebar__icon" />
+          <img src={Home} alt="ícone de casa/home" className="sidebar__icon" />
           Dashboard
         </NavLink>
         <NavLink to="/students" className="sidebar__link">
-          <img src={Students} alt="" className="sidebar__icon" />
+          <img
+            src={Students}
+            alt="ícone da página estudante"
+            className="sidebar__icon"
+          />
           Students
         </NavLink>
         <NavLink to="/addstudents" className="sidebar__link">
-          <img src={Students} alt="" className="sidebar__icon" />
+          <img
+            src={Students}
+            alt="ícone da página adicionar estudante"
+            className="sidebar__icon"
+          />
           Add Students
         </NavLink>
         <NavLink to="/teachers" className="sidebar__link">
-          <img src={Teachers} alt="" className="sidebar__icon" />
+          <img
+            src={Teachers}
+            alt="ícone da página professor"
+            className="sidebar__icon"
+          />
           Teachers
         </NavLink>
         <NavLink to="/finance" className="sidebar__link">

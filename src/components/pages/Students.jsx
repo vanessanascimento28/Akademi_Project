@@ -102,7 +102,7 @@ export default function Students() {
           {sortNewestFirst ? "Newest" : "Oldest"}
           <img
             src={sortNewestFirst ? FilterIcon : FilterIconUp}
-            alt=""
+            alt="seta"
             className="btn__icon btn__icon--right"
           />
         </button>
@@ -168,10 +168,18 @@ export default function Students() {
 
                 <td className="table__info-contact">
                   <button className="table__btn" aria-label="Phone">
-                    <img src={Phone} alt="" className="table__btn-phone" />
+                    <img
+                      src={Phone}
+                      alt="ícone de telefone"
+                      className="table__btn-phone"
+                    />
                   </button>
                   <button className="table__btn" aria-label="Email">
-                    <img src={Mail} alt="" className="table__btn-mail" />
+                    <img
+                      src={Mail}
+                      alt="ícone de email"
+                      className="table__btn-mail"
+                    />
                   </button>
                 </td>
 
@@ -196,7 +204,7 @@ export default function Students() {
             disabled={currentPage === 1}
             aria-label="Previous page"
           >
-            <img src={ArrowLeft} alt="" aria-hidden="true" />
+            <img src={ArrowLeft} alt="seta para esquerda" aria-hidden="true" />
           </button>
 
           {[1, 2, 3].map((n) => (
@@ -219,7 +227,11 @@ export default function Students() {
             disabled={currentPage === totalPages}
             aria-label="Next page"
           >
-            <img src={ArrowRight} alt="" aria-hidden="true" />
+            <img
+              src={ArrowRight}
+              alt="seta para a direita"
+              aria-hidden="true"
+            />
           </button>
         </nav>
       </div>
