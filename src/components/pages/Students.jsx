@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FilterIcon from "../../assets/images/icons/FilterIcon.svg";
-import FilterIconUp from "../../assets/images/icons/FiltericonUp.svg";
+import FilterIconUp from "../../assets/images/icons/FilterIconUp.svg";
 import AddIcon from "../../assets/images/icons/AddIcon.svg";
 import Mail from "../../assets/images/icons/Mail.svg";
 import Phone from "../../assets/images/icons/Phone.svg";
